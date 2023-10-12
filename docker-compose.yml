@@ -1,0 +1,13 @@
+﻿version: '3.8'
+services:
+  postgres:
+    # build:
+    #   context: .
+    image: postgres-app
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: password
+      DB_NAMES: "inventory,auth"
+    ports:
+      - 5432:5432
+    restart: always
